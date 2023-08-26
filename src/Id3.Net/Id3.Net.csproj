@@ -16,7 +16,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageTags>ID3 ID3.NET Lyrics3 MP3 ID3v1 ID3v1.0 ID3v1.1 ID3v2.3 Tag Tags Tagging Audio</PackageTags>
     <PackageReleaseNotes>Release notes are at https://github.com/JeevanJames/Id3/releases</PackageReleaseNotes>
-    <PackageIconUrl>https://github.com/JeevanJames/Id3/raw/master/icon.png</PackageIconUrl>
+    <!--<PackageIcon>https://github.com/JeevanJames/Id3/raw/master/icon.png</PackageIcon>-->
     <AssemblyName>Id3.Net</AssemblyName>
   </PropertyGroup>
 
