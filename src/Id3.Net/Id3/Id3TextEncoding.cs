@@ -22,6 +22,9 @@ namespace Id3
     public enum Id3TextEncoding : byte
     {
         Iso8859_1 = 0,
-        Unicode = 1
+        Unicode = 1, //UCS-2 (UTF-16 encoded Unicode with BOM), in ID3v2.2 and ID3v2.3.
+        UTF16BE = 2, //UTF-16BE encoded Unicode without BOM, in ID3v2.4.
+        UTF8 = 3, //UTF-8 encoded Unicode, in ID3v2.4.
+
     }
 }

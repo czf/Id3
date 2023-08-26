@@ -17,6 +17,7 @@ limitations under the License.
 */
 #endregion
 
+using System;
 using System.Diagnostics;
 using System.Text;
 
@@ -41,6 +42,10 @@ namespace Id3
                 return Encoding.GetEncoding("iso-8859-1");
             if (encodingType == Id3TextEncoding.Unicode)
                 return Encoding.Unicode;
+            if (encodingType == Id3TextEncoding.UTF8)
+                return Encoding.UTF8;
+            if (encodingType == Id3TextEncoding.UTF16BE)
+                return Encoding.BigEndianUnicode;
             Debug.Assert(false, "Invalid Encoding type specified");
             return null;
         }
@@ -83,8 +88,12 @@ namespace Id3
                 return 1;
             if (encodingType == Id3TextEncoding.Unicode)
                 return 2;
-            Debug.Assert(false, "Invalid encoding type specified");
-            return -1;
+            if (encodingType == Id3TextEncoding.UTF8)
+                return 1;
+            //if (encodingType == Id3TextEncoding.UTF16BE)
+            throw new NotImplementedException();
+            //Debug.Assert(false, "Invalid encoding type specified");
+            //return -1;
         }
     }
 }
